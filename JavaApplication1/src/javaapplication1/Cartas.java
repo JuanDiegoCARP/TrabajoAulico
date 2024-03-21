@@ -33,7 +33,7 @@ public class Cartas {
 
     @Override
     public String toString() {
-        return "Cartas{" + "Num=" + Num + ", palo=" + palo + '}';
+        return Num+" "+palo;
     }
     
     

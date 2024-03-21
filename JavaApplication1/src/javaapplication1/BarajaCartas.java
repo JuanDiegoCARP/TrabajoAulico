@@ -37,9 +37,7 @@ public BarajaCartas(){
                              
                           default:
                              
-                        }}}}
-    System.out.println(mazo.size());
-}
+                        }}}}}
 
 
 
@@ -49,12 +47,19 @@ public void barajar(){
 Collections.shuffle(mazo);
         
 System.out.println(mazo);
-         }
-
-public Cartas siguienteCarta(){
-    
-   
+         
 }
 
-    
+public void darCartas(int num){
+     if (mazo.size()>num) {
+         for (int i = 0; i <num; i++) {
+             System.out.println(mazo.get(i));
+             monton.add(mazo.get(i));
+             mazo.remove(i);
+         }
+     }else{
+         System.out.println("No hay suficientes cartas");
+     }
+ }
+
 }
