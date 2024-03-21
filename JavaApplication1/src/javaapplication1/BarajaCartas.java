@@ -62,4 +62,14 @@ public void darCartas(int num){
      }
  }
 
+ public void siguienteCarta(){     
+    
+       for (int i = 0; i <mazo.size(); i++) {
+             monton.add(mazo.get(i));
+             System.out.println("La carta es "+monton.get(i));
+             mazo.remove(i);
+             break;
+         }  
+ }
+
 }
