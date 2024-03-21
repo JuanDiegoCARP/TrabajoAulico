@@ -71,5 +71,18 @@ public void darCartas(int num){
              break;
          }  
  }
-
+ public void cartasMonton(){
+        if(!monton.isEmpty()){
+            System.out.println(monton);
+        }else{
+            System.out.println("No hay cartas en el mazo.");
+        }
+    }
+    public void mostrarBaraja(){
+        if(!mazo.isEmpty()){
+            System.out.println(mazo);
+        }else{
+            System.out.println("No quedan cartas en la baraja.");
+        }
+    }
 }
