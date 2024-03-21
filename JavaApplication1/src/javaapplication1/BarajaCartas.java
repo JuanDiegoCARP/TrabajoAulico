@@ -1,71 +1,60 @@
 package javaapplication1;
 
 import java.util.ArrayList;
+import java.util.Collections;
 
 public class BarajaCartas {
     
 
- private ArrayList<Cartas> mazo;
- private ArrayList<Cartas> monton;
+ private ArrayList<Cartas> mazo = new ArrayList<>();
+ private ArrayList<Cartas> monton = new ArrayList<>();
 
-
- 
- public void barajar(){
- 
-     for (Cartas cartas : mazo) {
-         for (int i = 1; i < 4; i++) {
-             for (int j = 1; j < 10; j++) {
-                 if(j!=8||j!=9){
-                     switch (i) {
+public BarajaCartas(){
+        for (int i = 1; i < 5; i++) {
+        for (int j = 1; j < 13; j++) {
+        if(j!=8&&j!=9){
+        switch (i) {
                          case 1:
-                             cartas.setNum(j);
-                             cartas.setPalo("Basto");
-                             
+                           Cartas bastos = new Cartas(j, "basto");
+                             mazo.add(bastos);
                          break;
                          
                          case 2:
-                             cartas.setNum(j);
-                             cartas.setPalo("Espada");   
+                            Cartas espadas = new Cartas(j, "espada");
+                             mazo.add(espadas); 
                          
                              break;
                              
                          case 3:           
-                             cartas.setNum(j);
-                             cartas.setPalo("Copa");
+                           Cartas copas = new Cartas(j, "copa");
+                           mazo.add(copas);
                          
                          break;
                          
                          case 4:
-                             cartas.setNum(j);
-                             cartas.setPalo("oro");
+                          Cartas oros = new Cartas(j,"oro");
+                          mazo.add(oros);
                              
-                      default:
+                          default:
                              
-                             
-                             
-                        
-                     }
-                 
-                 
-                 
-                 }
-                 
-             }
-             
-         }
-         
-        }
- 
-     System.out.println(mazo);
- 
- 
- }
- 
- 
- 
- 
- 
- 
- 
+                        }}}}
+    System.out.println(mazo.size());
 }
 
+
+
+
+public void barajar(){
+
+Collections.shuffle(mazo);
+        
+System.out.println(mazo);
+         }
+
+public Cartas siguienteCarta(){
+    
+   
+}
+
+    
+}
